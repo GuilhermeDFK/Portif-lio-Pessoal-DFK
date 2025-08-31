@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Formação</title>
+  <style>
+    body {
+      font-family: Arial; /* Alinhando as caixas dos textos*/
+      padding: 20px;
+      background: white;
+    }
+
+    .header {
+      height: 60px;
+      color: white;
+      text-shadow: 2px 2px 5px black;
+      /* Alinhando o titulo com a barra*/
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* Estilização */
+      background-color: aqua;
+      border-style: double;
+      border-width: 5px;
+      border-color: rgb(59, 150, 230);
+      margin-bottom: 30px;
+      position: relative;
+    }
+
+    .header h1 {
+      /* Estilização do título */
+      font-size: 33px;
+      text-align: center;
+    }
+
+    .retorno {
+      position: absolute;
+      right: 20px;
+      /* Alinhando o "voltar" com a barra */
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .retorno a {
+      /* Estilizando o voltar */
+      text-decoration: none;
+      color: white;
+      text-shadow: 2px 2px 5px black;
+      padding: 8px 15px;
+      border-radius: 5px;
+      font-weight: bold; /* Font bold para deixar um pouco mais bonito */
+    }
+
+
+    .lista ul {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      padding: 10px;
+      /* Melhorando a interatividade dependendo da tela */
+      align-items: flex-start;
+      flex-wrap: wrap;
+      list-style: none;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .lista ul li {
+      /* Alinhando as caixas de texto */
+      flex: 1 1 300px;
+      max-width: 350px;
+      box-sizing: border-box;
+    }
+
+    .escolaridade, .idiomas, .cursos {
+      /* Estilizando as caixa */
+      font-size: large;
+      border-style: double;
+      border-width: 5px;
+      border-radius: 7px;
+      text-align: center;
+      padding: 15px;
+      background: white;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .escolaridade p, .idiomas p, .cursos p {
+      /* Melhorando o tamanho dos textos e os alinhando */
+      margin: 0;
+      line-height: 1.5;
+      text-align: justify;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Minha Formação Atual</h1>
+    <div class="retorno">
+      <a href="Index.html" rel="noopener noreferrer">Voltar</a>
+    </div>
+  </div>
+
+  <div class="lista">
+    <ul>
+      <li>
+        <div class="escolaridade">
+          <h2>Escolaridade</h2>
+          <p>
+            Tenho o ensino médio completo e atualmente cursando bacharelado em Engenharia de software.
+            Na escola sempre fui um cara dedicado, sempre gostei de aprender coisas novas, tenho facilidade
+            com o aprendizado e por sempre gostar de buscar conhecimentos decidi ir para a area de programação
+            isso pela area sempre estar evoluindo e necessitando a busca por novas
+            tecnologias e auto desenvolvimento.
+          </p>
+        </div>
+      </li>
+      <li>
+        <div class="idiomas">
+          <h2>Idiomas</h2>
+          <p>
+            Tenho um curso de inglês intermediário, tenho uma boa capacidade de entendimento com o idioma,
+            gosto muito de ouvir músicas em inglês, o que me facilita ao pronunciar e aprender novas palavras.
+            Sonho em um dia poder viajar ao exterior para praticar mais, assim como o trabalho que hoje em dia
+            pode ser feito daqui mesmo. Futuramente planejo aperfeiçoar isso e conseguir um nível melhor de fluência.
+          </p>
+        </div>
+      </li>
+      <li>
+        <div class="cursos">
+          <h2>Cursos</h2>
+          <p>
+            Anteriormente fiz um curso de Análise e Desenvolvimento de Sistemas pela PUCRS.
+            Nele aprendi um pouco de lógica de programação, desenvolvimento web e trabalhei com JavaScript.
+            Infelizmente o curso tinha apenas 1 ano de duração, então não consegui ter um grande avanço no aprendizado.
+            Hoje, cursando Engenharia de Software, consigo desenvolver habilidades que antes não conseguia.
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>

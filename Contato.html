@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <style>
+        /* Trocando a cor de fundo da pagina */
+        body {
+            background-color: black;
+        }
+        /* Botão de voltar */
+        .retorno {
+            display: flex;
+            text-shadow: 2px 2px 5px black;
+            justify-content: center;
+            align-items: center;
+            border-style: solid;
+            border-color: aqua;
+            border-radius: 5px;
+            float: right;
+            color: white;
+            width: 50px;
+            height: 25px;
+            padding-right: 10px;
+            background-color: blue;
+        }
+        .retorno a:visited {
+            color: white;
+        }
+        .texto a:visited {
+            color: white;
+        }
+        /* Configurar isso foi difícil eu queria deixar as letras uma dentro da outra */    
+        .contato {
+            position: relative;
+            width: max-content;
+            margin: 40px auto 0;
+        }
+        .contato h1 {
+            color: aqua;
+            font-size: 75px;
+            margin: 0;
+            font-weight: bold;
+            text-align: center;
+        }
+        .texto2 {
+            position: absolute; /* alinhar o texto com o centro do primeiro texto */
+            top: 50%;   
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 250px;
+
+            color: rgb(77, 105, 228);   /* Personalização do texto interno */
+            font-size: 23px;
+            font-weight: normal;
+        }
+        /* decidi fazer uma div dos textos para poder centraliza todos de uma vez */
+        .texto {
+        color: aqua;
+        float: left;
+        width: 20%;
+        padding-left: 10%;
+        padding-top: 10%;
+        }
+        /* Configurando 1 por 1 agora */
+        .texto h1{
+            text-align: center;
+        }
+        /* Para sumir com um retangulozinho que estava acabando com a estética */
+        .nome button,
+        .email button,
+        .mensagem button {
+            display: none; /* esconde os botões */
+        }
+        /* Alinhando os formularios na posição que eu queria */
+        .formulario{
+            float: left;
+            padding-top: 10%;
+            padding-left: 20%;
+        }
+        /* Configurando os inputs */
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            background-color: transparent;
+            border: 1px solid white; /* Borda branca fina */
+            padding: 10px;
+            margin-bottom: 15px;
+            color: white; /* Texto branco dentro das caixas */
+            font-size: 16px;
+            border-radius: 3px;
+            transition: border-color 0.3s ease;
+            resize: vertical;
+        }
+        /* Aumentando o tamanho deles */
+        .nome{
+        width: 500px;
+        }
+        /* Estilizar o botão de link para meu email assim alertando um possivel usuario de que é possível mandar mensagem diretamente no meu email */
+        .eu a:hover {
+            color: blue;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="retorno">
+        <a href="Index.html" rel="noopener noreferrer">Voltar</a>
+    </div>
+
+    <div class="contato">
+        <h1>CONTATO</h1>
+        <div class="texto2">ENTRAR EM CONTATO</div>
+    </div>
+
+    <div class="texto">
+        <h1>Não SEJA TÍMIDO</h1>
+        <p>
+            Tem um projeto em mente ou uma ideia mirabolante surgiu ? Estou a disposição para qualquer tipo de contato. Estarei sempre disponivel para a 
+            construção de um novo projeto ou para desenvolvimento de novas ideias, meu objetivo 
+            é fazer parte de suas visões e da construção de algo novo.
+        </p>
+        <h2>
+            Envie me
+        </h2>
+        <div class="eu"><a href="https://mail.google.com/mail/u/0/#search/in%3Asent+gui.cypherfk17%40gmail.com?compose=new" target="_blank">gui.cypherfk17@gmail.com</a></div>
+    </div>
+    <div class="formulario">
+        <div class="nome">
+            <label for="Entre com seu Nome"></label>
+            <input type="text" placeholder="Digite seu Nome" id="nome" name="nome">
+            <button type="button" onclick="Entrar_com_o_Nome()"></button>
+        </div>
+
+        <div class="email">
+            <label for="Entre com Seu Email"></label>
+            <input type="text" placeholder="Digite seu Email"  id="email" name="email">
+            <button type="button" onclick="Entrar_com_o_Email()"></button>
+        </div>
+
+        <div class="mensagem">
+            <label for="Entre com sua Mensagem"></label>
+            <input type="text" placeholder="Digite sua Mensagem" id="mensagem" name="mensagem">
+            <button type="button" onclick="Entrar_com_o_Mensagem()"></button>
+        </div>
+        <button type="button" onclick="enviarDados()">Enviar</button>
+    </div>    
+    <script>
+        // Esta parte eu não entendi da atividade então fiz igual o exemplo da professora na ultima aula relacionada a javascript
+        // Não sabia se era para fazer com que o nome email e a mensagem do usuario deveria ser enviada diretamente pro meu email utilizando as abas da minha pagina
+        // Então resolvi por um link diretamente para meu email se alguem clicasse em cima do meu email
+        function enviarDados() {
+            let nome = document.getElementById("nome").value;
+            let email = document.getElementById("email").value;
+            let mensagem = document.getElementById("mensagem").value;
+      
+      // Armazena os valores
+      localStorage.setItem("nome", nome);
+      localStorage.setItem("email", email);
+      localStorage.setItem("mensagem", mensagem);
+      // Redireciona o usuário para ver os dados
+      window.location.href = "Dados.html";
+        }
+
+    </script>
+</body>
+</html>

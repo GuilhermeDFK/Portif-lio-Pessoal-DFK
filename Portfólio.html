@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifólio</title>
+</head>
+<style>
+    .retorno{
+        /* Configuração e estilização do voltar */
+        display: flex;
+        text-shadow: 2px 2px 5px black;
+        justify-content: center;
+        align-items: center;
+        border-style: solid;
+        border-color: aqua;
+        border-radius: 5px;
+        float: right;
+        color: aqua;
+        width: 50px;
+        height: 25px;
+        padding-right: 10px;
+        background-color: blue;
+        text-decoration: none;
+    }
+    /* Só para o voltar manter a cor branca */
+    .retorno a:visited {
+        color: white;
+    }
+    /* Alinhando as informações relacionadas a mim */    
+    .eu {
+        float: left;
+        width: 500px;
+    }
+    /* Configurando e ajustando texto por texto */
+    .eu h1 {
+        font-size: 40px;
+        padding-top: 100px;
+        padding-left: 35px;
+    }
+    .eu p {
+        padding-left: 80px;
+        font-size: large;
+    }
+    .eu h2 {
+        padding-left: 80px;
+    }
+    /* Resolvi fazer uma barra abaixo pra dar um detalhe a mais e dividir os textos */
+    .barra h2 {
+        border-style: inset;
+        width: 10cm;
+    }
+    /* Posicionando o main */
+    .main {
+        float: left;
+        width: 900px;
+    }
+    /* Configurando e estilizando ele item por item */
+    .main h1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(60, 266, 266);
+        text-shadow: 2px 2px 4px black;
+        color: white;
+        border-style: double;
+        border-color: rgb(70, 181, 245);
+        padding: 10px;
+    }
+    .main p{
+        border-style: groove;
+        border-color: rgb(70, 181, 245);
+        padding: 10px;
+        font-size: 20px;
+    }
+    .main h2{
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .links ul{
+        text-shadow: 2px 2px 5px black;
+        background-color: aqua;
+        font-size: 20px;
+        border-style: groove;
+        padding: 10px;
+        text-align: center;
+        list-style-type: none;
+        border-width: 5px;
+        border-radius: 5px;
+        border-color: rgb(70, 181, 245);
+    }
+    /* Para manter a cor azul */
+    .links :visited {
+        color: rgb(4, 0, 255);
+    }
+    
+
+</style>
+<body>
+    <div class="retorno">
+        <a href="Index.html"  rel="noopener noreferrer">Voltar</a>
+    </div>
+    <div class="eu">
+        <h1>Guilherme Darjan <br>Froggel Kozechen</h1>
+        <p>Programador junior</p>
+        <div class="barra">
+            <h2></h2>
+        </div>
+        <h2>Detalhes de Contato</h2>
+        <p>Curitiba PR, Phone 41 995004035,<br>gui.cypherfk17@gmail.com</p>
+    </div>
+    <div class="main">
+        <h1>O que eu sou capaz de fazer ?</h1>
+        <p>
+            Como um desenvolvedor junior em treinamento por enquanto consigo fazer algumas coisas mais basicas,
+            mas com um leve foco a mais e buscando conhecimento e aprendizado consigo me desenrolar bem no que faço,
+            a minha principal linguagem de programação hoje em dia é python com ela consigo ter um desenvolvimento mais 
+            mirabolante, minha segunda linguagem de programação seria o java script, em um trabalho passado trabalhei com 
+            Structured Query Language (SQL) nesse trabalho universitario desenvolvi um pequeno banco de dados para uma loja
+            ficticia de carro, tenho conhecimento em linux, consigo desenvolver sites mais simples na utilização de html e css,
+            mas se eu tiver um bom exemplo do que precisa ser feito consigo fazer milagres
+        </p>
+        <h2>Referencias a Trabalhos passados:</h2>
+        <div class="links">
+            <ul>
+                <li><a href="Trabalhos anteriores/Trabalho LPA Modulo B Feito (2).docx" target="_blank" rel="noopener noreferrer">Trabalho em Python</a></li>
+                <li><a href="Trabalhos anteriores/Trabalho - Relatorio.pdf" target="_blank" rel="noopener noreferrer">Banco de dados</a></li>
+                <li><a href="Calculadora.html" rel="noopener noreferrer">Site de amostra</a></li>
+            </ul>
+    </div>
+</body>
+</html>

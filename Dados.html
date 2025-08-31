@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Dados</title>
+</head>
+<style>
+    .retorno a {
+      text-decoration: none;
+      color: white;
+      text-shadow: 2px 2px 5px black;
+      padding: 8px 15px;
+      border-radius: 5px;
+    }
+</style>
+<body>
+  <h1>Dados</h1>
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome">
+   <br>
+    <label for="Entre com Seu Email">Email:</label>
+    <input type="text" id="email" name="email">
+   <br>
+    <label for="Entre com sua Mensagem">Mensagem:</label>
+    <input type="text" id="mensagem" name="mensagem">
+    <div class="retorno">
+            <a href="Index.html" rel="noopener noreferrer">Voltar</a>
+        </div>
+    
+  <script>
+    // Recupera os valores armazenados
+    let nome = localStorage.getItem("nome");
+    let email = localStorage.getItem("email");
+    let mensagem = localStorage.getItem("mensagem");
+    
+    // Mostra os valores dos campos de texto
+    document.getElementById("nome").value = nome;
+    document.getElementById("email").value = email;
+    document.getElementById("mensagem").value = mensagem;
+  </script>
+</body>
+</html>
